@@ -1,7 +1,7 @@
 pietrushnic/rpi-dt-firmware
 ==========
 
-Raspberry Pi Linux kernel 3.16.5+ (ARCH_BCM2835) with additional patches.
+Raspberry Pi Linux kernel 3.16.6+ (ARCH_BCM2835) with additional patches.
 
 Install
 -------
@@ -16,6 +16,10 @@ sudo REPO_URI=https://github.com/pietrushnic/rpi-dt-firmware rpi-update
 Changelog
 ---------
 2014-10-15:
+* Rebase to 3.16.6
+
+2014-10-15:
+* Third release
 * bcm2835-mbox, bcm2835-cpufreq and bcm2835-thermal drivers based on Lubomir Rintel [work](https://github.com/hackerspace/rpi-linux/commits/lr-raspberry-pi-new-mailbox)
 
 2014-10-12:
@@ -35,7 +39,6 @@ Sources
 * [raspberrypi/tools](https://github.com/raspberrypi/tools/archive/2324612605316a64f9daae33712e5afe762cf995.tar.gz)
 * [raspberrypi/firmware](https://github.com/raspberrypi/firmware/archive/e4afeda91268c412277c388e67811356f2f35931.tar.gz)
 * [http://git.denx.de/?p=u-boot/u-boot-arm.git](http://git.denx.de/?p=u-boot/u-boot-arm.git;a=snapshot;h=3d420cbd355a5f09e4f113eb10579a264a8ef138;sf=tgz)
-* [pietrushnic/rpi-dt-linux](https://github.com/pietrushnic/rpi-dt-linux/archive/c5edab5b88ed11ff3e235e1c535e1d8202b7f174.tar.gz)
 
 
 Patches
