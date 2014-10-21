@@ -15,6 +15,10 @@ sudo REPO_URI=https://github.com/pietrushnic/rpi-dt-firmware rpi-update
 
 Changelog
 ---------
+2014-10-21:
+* Fix bcm2835-mbox issues with checking wrong mailbox
+* Enable DMA_BCM2835
+
 2014-10-15:
 * Rebase to 3.16.6
 
@@ -37,7 +41,7 @@ Links
 Sources
 -------
 * [raspberrypi/tools](https://github.com/raspberrypi/tools/archive/2324612605316a64f9daae33712e5afe762cf995.tar.gz)
-* [raspberrypi/firmware](https://github.com/raspberrypi/firmware/archive/e4afeda91268c412277c388e67811356f2f35931.tar.gz)
+* [raspberrypi/firmware](https://github.com/raspberrypi/firmware/archive/c23c0022740bb4531e841bd1321d2a652c8b3b0d.tar.gz)
 * [http://git.denx.de/?p=u-boot/u-boot-arm.git](http://git.denx.de/?p=u-boot/u-boot-arm.git;a=snapshot;h=3d420cbd355a5f09e4f113eb10579a264a8ef138;sf=tgz)
 
 
