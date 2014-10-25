@@ -1,13 +1,13 @@
 pietrushnic/rpi-dt-firmware
 ==========
 
-Raspberry Pi Linux kernel 3.16.6+ (ARCH_BCM2835) with additional patches.
+Raspberry Pi Linux kernel 3.17.1+ (ARCH_BCM2835) with additional patches.
 
 Install
 -------
 
 ```text
-sudo REPO_URI=https://github.com/pietrushnic/rpi-dt-firmware rpi-update
+sudo REPO_URI=https://github.com/pietrushnic/rpi-dt-firmware BRANCH=mmc-dma rpi-update
 ```
 
 
@@ -57,9 +57,17 @@ Default config: bcm2835_defconfig
 
 Added:
 ```text
+BUILD_BIN2C=y
+DMADEVICES=y
+DMA_BCM2835=y
+DMA_ENGINE=y
+DMA_OF=y
+DMA_VIRTUAL_CHANNELS=y
 IKCONFIG=y
 IKCONFIG_PROC=y
 MMC_BCM2835=y
+MMC_BCM2835_DMA=y
+MMC_BCM2835_PIO_DMA_BARRIER=2
 ```
 
 
