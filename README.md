@@ -1,7 +1,7 @@
 pietrushnic/rpi-dt-firmware
 ==========
 
-Raspberry Pi Linux kernel 3.16.6+ (ARCH_BCM2835) with additional patches.
+Raspberry Pi Linux kernel 3.17.1+ (ARCH_BCM2835) with additional patches.
 
 Install
 -------
@@ -15,6 +15,13 @@ sudo REPO_URI=https://github.com/pietrushnic/rpi-dt-firmware rpi-update
 
 Changelog
 ---------
+2014-10-28
+* switch to 3.17.1
+* add slave_sg for bcm2835-dma
+* replace sdhci-bcm2835 with bcm2835-mmc
+* fix issue with bcm2835-cpufreq with incorrect mbox status register in tx_done and send_data
+* move DMA, MMC and IKCONFIG options to bcm2835_defconfig
+
 2014-10-21:
 * Fix bcm2835-mbox issues with checking wrong mailbox
 * Enable DMA_BCM2835
@@ -40,9 +47,9 @@ Links
 
 Sources
 -------
-* [raspberrypi/tools](https://github.com/raspberrypi/tools/archive/2324612605316a64f9daae33712e5afe762cf995.tar.gz)
-* [raspberrypi/firmware](https://github.com/raspberrypi/firmware/archive/c23c0022740bb4531e841bd1321d2a652c8b3b0d.tar.gz)
-* [http://git.denx.de/?p=u-boot/u-boot-arm.git](http://git.denx.de/?p=u-boot/u-boot-arm.git;a=snapshot;h=3d420cbd355a5f09e4f113eb10579a264a8ef138;sf=tgz)
+* [raspberrypi/tools](https://github.com/raspberrypi/tools/archive/719ac36e09bbc30350e978a20c2828245222feed.tar.gz)
+* [raspberrypi/firmware](https://github.com/raspberrypi/firmware/archive/5711461a29add5bf9e5f5c9dfc08aa12cdf0f19f.tar.gz)
+* [http://git.denx.de/?p=u-boot/u-boot-arm.git](http://git.denx.de/?p=u-boot/u-boot-arm.git;a=snapshot;h=59a9cfdd16ad7ab14f22697bf1e049c6bea0d3e2;sf=tgz)
 
 
 Patches
@@ -53,14 +60,6 @@ Kernel config
 -------------
 Default config: bcm2835_defconfig
 
-
-
-Added:
-```text
-IKCONFIG=y
-IKCONFIG_PROC=y
-MMC_BCM2835=y
-```
 
 
 <p align="center">Built with <a href="https://github.com/notro/rpi-build/wiki">rpi-build</a></p>
