@@ -1,7 +1,7 @@
 pietrushnic/rpi-dt-firmware
 ==========
 
-Raspberry Pi Linux kernel 3.17.1+ (ARCH_BCM2835) with additional patches.
+Raspberry Pi Linux kernel 3.17.2+ (ARCH_BCM2835) with additional patches.
 
 Install
 -------
@@ -15,6 +15,11 @@ sudo REPO_URI=https://github.com/pietrushnic/rpi-dt-firmware rpi-update
 
 Changelog
 ---------
+2014-11-11
+* switch to 3.17.2
+* remove bcm2835-mmc and options related with it
+* add sdhci-bcm2835 improvements by Scott Branden <sbranden@broadcom.com>
+
 2014-10-28
 * switch to 3.17.1
 * add slave_sg for bcm2835-dma
@@ -47,9 +52,9 @@ Links
 
 Sources
 -------
-* [raspberrypi/tools](https://github.com/raspberrypi/tools/archive/719ac36e09bbc30350e978a20c2828245222feed.tar.gz)
-* [raspberrypi/firmware](https://github.com/raspberrypi/firmware/archive/5711461a29add5bf9e5f5c9dfc08aa12cdf0f19f.tar.gz)
-* [http://git.denx.de/?p=u-boot/u-boot-arm.git](http://git.denx.de/?p=u-boot/u-boot-arm.git;a=snapshot;h=59a9cfdd16ad7ab14f22697bf1e049c6bea0d3e2;sf=tgz)
+* [raspberrypi/tools](https://github.com/raspberrypi/tools/archive/aeb175171947230d943d61a5a375ef61041f579d.tar.gz)
+* [raspberrypi/firmware](https://github.com/raspberrypi/firmware/archive/778b37038a781bed340358a9d533579756562139.tar.gz)
+* [http://git.denx.de/?p=u-boot/u-boot-arm.git](http://git.denx.de/?p=u-boot/u-boot-arm.git;a=snapshot;h=868de51ddee75d65f3ca4235f97900410f424def;sf=tgz)
 
 
 Patches
@@ -60,6 +65,12 @@ Kernel config
 -------------
 Default config: bcm2835_defconfig
 
+
+
+Deleted:
+```text
+MMC_SDHCI_BCM2835_VERIFY_WORKAROUND=y
+```
 
 
 <p align="center">Built with <a href="https://github.com/notro/rpi-build/wiki">rpi-build</a></p>
